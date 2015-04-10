@@ -6,11 +6,11 @@ Unofficial WhatsApp client MIT licensed, [Electron (formerly atom-shell)](https:
 ## Downloads
 Available only for Mac now, but may add Windows and Linux support soon.
 
-[Download Now for Mac](https://github.com/marekhrabe/messenger/releases)
+[Download Now for Mac](https://github.com/anatolinicolae/whatsapp/releases)
 
 
 ## Installation
-1. [Download](https://github.com/marekhrabe/messenger/releases)
+1. [Download](https://github.com/anatolinicolae/whatsapp/releases)
 2. Unzip
 3. Run the app
 4. Scan the QR code with your Android phone ([why no iOS?](https://blog.whatsapp.com/614/WhatsApp-Web))
