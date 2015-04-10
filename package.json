@@ -1,7 +1,7 @@
 {
 	"name": "whatsapp",
 	"version": "0.1.0",
-	"description": "Unofficial Whatsapp client for Mac",
+	"description": "Unofficial WhatsApp client for Mac",
 	"main": "main.js",
 	"repository": {
 		"type": "git",

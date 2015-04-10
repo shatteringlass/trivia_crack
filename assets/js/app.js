@@ -38,9 +38,9 @@ onload = function() {
 // Menus
 var menu = new Menu();
 var template = [{
-	label: 'Whatsapp',
+	label: 'WhatsApp',
 	submenu: [{
-		label: 'About Whatsapp',
+		label: 'About WhatsApp',
 		selector: 'orderFrontStandardAboutPanel:'
 	}, {
 		type: 'separator'
@@ -50,7 +50,7 @@ var template = [{
 	}, {
 		type: 'separator'
 	}, {
-		label: 'Hide Whatsapp',
+		label: 'Hide WhatsApp',
 		accelerator: 'Command+H',
 		selector: 'hide:'
 	}, {

@@ -17,7 +17,7 @@ Available only for Mac now, but may add Windows and Linux support soon.
 5. Chat
 
 ## Data usage
-WhatsApp web client actually stays connected to you phone to sync messages so make sure you’re connected to a WIFI network if you plan to use the app for a long time.
+WhatsApp web client actually stays connected to you phone to sync messages so make sure you’re connected to a Wi-Fi network if you plan to use the app for a long time.
 
 ## Desktop notifications
 Actually not working.
