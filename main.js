@@ -22,11 +22,19 @@ app.on('ready', function () {
 	mainWindow.loadUrl('file://' + __dirname + '/app.html');
 });
 
+app.on('activate-with-no-open-windows', function () {
+	mainWindow.show();
+});
+
 // API
 ipc.on('do-native-action', function(event, action) {
 	switch (action) {
 		case 'quit':
 			app.quit();
+			break;
+			
+		case 'close':
+			mainWindow.hide();
 			break;
 			
 		case 'minimize':

@@ -15,7 +15,7 @@ var btn_minimize = document.getElementById('btn-minimize');
 
 btn_close.addEventListener('click', function(e) {
 	e.preventDefault();
-	doAction('quit');
+	doAction('close');
 }, false);
 
 btn_minimize.addEventListener('click', function(e) {
@@ -110,7 +110,9 @@ var template = [{
 	}, {
 		label: 'Close',
 		accelerator: 'Command+W',
-		selector: 'performClose:'
+		click: function() {
+			doAction('close');
+		}
 	}, {
 		type: 'separator'
 	}, {
