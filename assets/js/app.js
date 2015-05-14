@@ -4,6 +4,8 @@ var shell = require('shell');
 var remote = require('remote');
 var Menu = remote.require('menu');
 var MenuItem = remote.require('menu-item');
+var webview = document.getElementById("messenger");
+var indicator = document.getElementById("loading");
 
 var doAction = function(action) {
 	ipc.send('do-native-action', action);
@@ -26,9 +28,7 @@ btn_minimize.addEventListener('click', function(e) {
 // Ready window actions
 onload = function() {
 	document.getElementsByTagName('body')[0].className += ' ready';
-	
-	var webview = document.getElementById("messenger");
-	
+		
 	webview.addEventListener('did-finish-load', function(e) {
 		webview.insertCSS('.app { border-radius: 0px!important; }');
 	});
@@ -37,6 +37,20 @@ onload = function() {
 		shell.openExternal(e.url);
 	});
 }
+
+// Show loading stuff	
+var loadstart = function() {
+	indicator.classList.remove("hide");
+	webview.classList.add("hide");
+}
+
+var loadstop = function() {
+  indicator.classList.add("hide");
+  webview.classList.remove("hide");
+}
+
+webview.addEventListener("did-start-loading", loadstart);
+webview.addEventListener("did-stop-loading", loadstop);
 
 // Menus
 var menu = new Menu();
@@ -121,7 +135,12 @@ var template = [{
 	}, ]
 }, {
 	label: 'Help',
-	submenu: []
+	submenu: [{
+		label: 'GitHub Issues',
+		click: function() {
+			shell.openExternal("https://github.com/anatolinicolae/whatsapp/issues");
+		}
+	}]
 }, ];
 
 menu = Menu.buildFromTemplate(template);

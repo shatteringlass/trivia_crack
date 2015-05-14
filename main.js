@@ -6,8 +6,6 @@ var mainWindow = null;
 
 // App
 app.on('ready', function () {
-	//if (app.dock) app.dock.hide()
-	
 	mainWindow = new BrowserWindow({
 		width: 800,
 		height: 600,
