@@ -4,7 +4,7 @@ var shell = require('shell');
 var remote = require('remote');
 var Menu = remote.require('menu');
 var MenuItem = remote.require('menu-item');
-var webview = document.getElementById("messenger");
+var webview = document.getElementById("game");
 var indicator = document.getElementById("loading");
 
 var doAction = function(action) {
@@ -55,9 +55,9 @@ webview.addEventListener("did-stop-loading", loadstop);
 // Menus
 var menu = new Menu();
 var template = [{
-	label: 'WhatsApp',
+	label: 'Trivia Crack',
 	submenu: [{
-		label: 'About WhatsApp',
+		label: 'About Trivia Crack',
 		selector: 'orderFrontStandardAboutPanel:'
 	}, {
 		type: 'separator'
@@ -67,7 +67,7 @@ var template = [{
 	}, {
 		type: 'separator'
 	}, {
-		label: 'Hide WhatsApp',
+		label: 'Hide Trivia Crack',
 		accelerator: 'Command+H',
 		selector: 'hide:'
 	}, {
@@ -138,7 +138,7 @@ var template = [{
 	submenu: [{
 		label: 'GitHub Issues',
 		click: function() {
-			shell.openExternal("https://github.com/anatolinicolae/whatsapp/issues");
+			shell.openExternal("https://github.com/shatteringlass/trivia_crack/issues");
 		}
 	}]
 }, ];
